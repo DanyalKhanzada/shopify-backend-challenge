@@ -1,28 +1,37 @@
-const { Model, DataTypes } = require('sequelize');
+// import models
+const Product = require('./Product');
+const Category = require('./Category');
+const Tag = require('./Tag');
+const ProductTag = require('./ProductTag');
 
-const sequelize = require('../config/connection.js');
+// Products belongsTo Category
+Product.belongsTo(Category, {
+  foreignKey: 'category_id', onDelete: 'SET NULL'
+});
 
-class Tag extends Model {}
+// Categories have many Products
+Category.hasMany(Product, {
+  foreignKey: 'category_id', onDelete: 'SET NULL'
+});
 
-Tag.init(
-  {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true
-    },
-    tag_name: {
-      type: DataTypes.STRING,
-    },
-  },
-  {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'tag',
-  }
-);
+// Products belongToMany Tags (through ProductTag)
+Product.belongsToMany(Tag,{
+  through: ProductTag,
+  as: 'tagged_product',
+  foreignKey: 'product_id', onDelete: 'CASCADE'
+});
 
-module.exports = Tag;
+// Tags belongToMany Products (through ProductTag)
+Tag.belongsToMany(Product,{
+  through: ProductTag,
+  as: 'tagged_product',
+  foreignKey: 'tag_id', onDelete: 'CASCADE'
+});
+
+module.exports = {
+  Product,
+  Category,
+  Tag,
+  ProductTag
+};
+  
