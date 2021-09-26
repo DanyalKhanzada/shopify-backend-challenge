@@ -1,32 +1,37 @@
 {
   "name": "shopify-backend-challenge",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "Shopify Backend Challenge",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "watch": "nodemon server.js",
-    "seed": "node seeds/index.js"
+    "start": "./node_modules/.bin/env-cmd -f ./config/dev.env nodemon src/index.js",
+    "test": "./node_modules/.bin/env-cmd -f ./config/test.env jest --watch --runInBand"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DanyalKhanzada/shopify-backend-challenge.git"
+    "url": "https://github.com/DanyalKhanzada/shopify-backend-challenge/issues"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Danyal Khanzada",
   "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^2.0.3"
-  },
   "bugs": {
     "url": "https://github.com/DanyalKhanzada/shopify-backend-challenge/issues"
   },
   "homepage": "https://github.com/DanyalKhanzada/shopify-backend-challenge#readme",
   "dependencies": {
-    "dotenv": "^10.0.0",
+    "bcrypt": "^5.0.0",
     "express": "^4.17.1",
-    "mysql2": "^2.3.0",
-    "sequelize": "^6.6.5"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.9",
+    "multer": "^1.4.2",
+    "sharp": "^0.26.2"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "jest": "^26.5.3",
+    "nodemon": "^2.0.5",
+    "supertest": "^5.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
