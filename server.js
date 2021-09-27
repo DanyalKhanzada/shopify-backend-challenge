@@ -1,17 +1,22 @@
 const express = require('express');
-const routes = require('./routes');
-// import sequelize connection
-const sequelize = require('./config/connection');
+const mongoose = require('mongoose');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
 
-app.use(routes);
-
-// sync sequelize models to the database, then turn on the server
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/shopify-backend-challenge', {
+  useFindAndModify: false,
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 });
+
+// Use this to log mongo queries being executed!
+mongoose.set('debug', true);
+
+app.use(require('./routes'));
+
+app.listen(PORT, () => console.log(`🌍 Connected on localhost:${PORT}`));

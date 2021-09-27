@@ -1,9 +1,9 @@
 const mongoose = require("mongoose")
 
-mongoose.connect(process.env.MONGO_URL, {
+mongoose.connect('mongodb://localhost/shopify-backend-challenge', {
+  useFindAndModify: false,
   useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true
+  useUnifiedTopology: true
 }).then(() => {
   console.log("Connected to database")
 }).catch((err) => {
