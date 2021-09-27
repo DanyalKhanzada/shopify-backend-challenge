@@ -4,4 +4,3 @@ package-lock.json
 .DS_Store
 desktop.ini
 ./desktop.ini
-.env
