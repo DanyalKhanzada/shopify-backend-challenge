@@ -5,10 +5,10 @@
 ## Table of Contents
  - [Description](#description)
  - [Installation](#installation)
- - [Usage](#usage)
- - [License](#license)
- - [Contributing](#contributing)
+ - [Technology](#technology-used)
+ - [Dependencies](#dependencies-used)
  - [Tests](#tests)
+ - [License](#license)
  - [Questions](#questions)
 
 ## Description
@@ -35,22 +35,13 @@ Upvote:
 ## Installation
 Step 1: Install npm packages: `npm i` or `npm install`
 Step 2: Running the server locally: `npm start`
-
-## Usage
-In the root directory of the app, start the server by entering `npm start` in the command line.
-Enter the URL `http://localhost:3001/`  in Postman, Insomnia Core or a similar API client.
-In your API client, you can make GET, POST, PUT, and DELETE requests for users, images, and upvote.
-
-## License
- MIT
- (https://choosealicense.com/licenses/mit/)
  
-## Technology Used
+## Technology-Used
 `Javascript` - Language
 `MongoDB Atlas` - A cross-platform document database
 `Node.js` - A Javascript runtime enviroment
 
-## Dependencies Used
+## Dependencies-Used
 1. Express.js 
 2. Nodemon
 3. Mongoose
@@ -67,9 +58,12 @@ In the root directory of the app, start the server by entering `npm start` and `
 Enter the URL `http://localhost:3000/`  in Postman, Insomnia Core or a similar API client.
 In your API client, you can make GET, POST, PUT, and DELETE requests for users, images, and upvote.
 
+
 ## License
  MIT
  (https://choosealicense.com/licenses/mit/)
 
 ## Questions
  If you have any questions about the repo, please open an issue in my GitHub at danyalkhanzada.
+
++vAFMqdmf8HaOd912WhSowAAAAASUVORK5CYII=
