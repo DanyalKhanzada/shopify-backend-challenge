@@ -56,8 +56,8 @@ const userOneImageOne = {
   upvotes: 0,
   image: "+vAFMqdmf8HaOd912WhSowAAAAASUVORK5CYII=",
   uploader: userOneId,
-  createdAt: "2020-05-26T04:01:19.620Z",
-  updatedAt: "2020-05-26T04:01:19.620Z"
+  createdAt: "2021-09-27T04:01:19.620Z",
+  updatedAt: "2021-09-27T04:01:19.620Z"
 }
 
 const userOneImageTwo = {
@@ -66,8 +66,8 @@ const userOneImageTwo = {
   upvotes: 0,
   image: "+vAFMqdmf8HaOd912WhSowAAAAASUVORK5CYII=",
   uploader: userOneId,
-  createdAt: "2020-05-26T04:01:19.620Z",
-  updatedAt: "2020-05-26T04:01:19.620Z"
+  createdAt: "2021-09-27T04:01:19.620Z",
+  updatedAt: "2021-09-27T04:01:19.620Z"
 }
 
 const userTwoImageOne = {
@@ -76,8 +76,8 @@ const userTwoImageOne = {
   upvotes: 0,
   image: "+vAFMqdmf8HaOd912WhSowAAAAASUVORK5CYII=",
   uploader: userTwoId,
-  createdAt: "2020-05-26T04:01:19.620Z",
-  updatedAt: "2020-05-26T04:01:19.620Z"
+  createdAt: "2021-09-27T04:01:19.620Z",
+  updatedAt: "2021-09-27T04:01:19.620Z"
 }
 
 const userTwoImageTwo = {
@@ -86,8 +86,8 @@ const userTwoImageTwo = {
   upvotes: 0,
   image: "+vAFMqdmf8HaOd912WhSowAAAAASUVORK5CYII=",
   uploader: userTwoId,
-  createdAt: "2020-05-26T04:01:19.620Z",
-  updatedAt: "2020-05-26T04:01:19.620Z"
+  createdAt: "2021-09-27T04:01:19.620Z",
+  updatedAt: "2021-09-27T04:01:19.620Z"
 }
 
 const setUpDatabase = async () => {
