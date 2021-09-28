@@ -42,15 +42,15 @@ Upvote:
 - `Node.js` - A Javascript runtime enviroment
 
 ## Dependencies-Used
-- Express.js 
-- Nodemon
-- Mongoose
-- Bcrypt
-- Jsonwebtoken
-- Multer
-- Sharp
-- Jest
-- Supertest
+- `Express.js`
+- `Nodemon`
+- `Mongoose`
+- `Bcrypt`
+- `Jsonwebtoken`
+- `Multer`
+- `Sharp`
+- `Jest`
+- `Supertest`
 
 
 ## Tests
