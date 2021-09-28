@@ -12,7 +12,7 @@
  - [Questions](#questions)
 
 ## Description
-This is an image upload platform where users can upload images and upvote the images by using the token that they earn by uploading images. Everytime you upload an image on the platform; you earn a virtual token. Virtual token starts from 0.
+This is an image upload platform where users can upload images and upvote the images by using the token that they earn by uploading images. Everytime you upload an image on the platform; you earn a virtual token. And whenever you upvote; you lose a token. Virtual token starts from 0.
 
 As a User you can:
 User:
