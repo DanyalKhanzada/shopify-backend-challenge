@@ -56,8 +56,7 @@ Upvote:
 ## Tests
 In the root directory of the app, start the server by entering `npm start` and `npm test` in the command line.
 Enter the URL `http://localhost:3000/`  in Postman, Insomnia Core or a similar API client.
-In your API client, you can make GET, POST, PUT, and DELETE requests for users, images, and upvote.
-
+In your API client, you can make GET, POST, PUT, and DELETE requests for users, images, and upvote. Refer to the Tests. I have also included a Postman file in this repository.
 
 ## License
  MIT
@@ -65,5 +64,3 @@ In your API client, you can make GET, POST, PUT, and DELETE requests for users, 
 
 ## Questions
  If you have any questions about the repo, please open an issue in my GitHub at danyalkhanzada.
-
-+vAFMqdmf8HaOd912WhSowAAAAASUVORK5CYII=
