@@ -1,0 +1,495 @@
+{
+	"info": {
+		"_postman_id": "79dab70b-7b72-4c9c-bb8d-ddfcd67c64bf",
+		"name": "shopify-backend-challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "93b78bdb-a760-4165-89de-79d361ab1afb",
+						"exec": [
+							"if (pm.response.code === 201) {",
+							"    pm.environment.set('authToken', pm.response.json().token)",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"danyal12345\",\n\t\"password\": \"test1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/users",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login with Auth",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ed4d801d-c34a-4634-ab01-64b423d158ef",
+						"exec": [
+							"if (pm.response.code === 200) {",
+							"    pm.environment.set('authToken', pm.response.json().token)",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"danyal12345\",\n\t\"password\": \"test1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/users/login",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/users/logout",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"users",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload public image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "images",
+							"type": "file",
+							"src": "/Users/danyal/Downloads/chat-assets/img/favicon copy.png"
+						},
+						{
+							"key": "price",
+							"value": "15",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "uploader",
+							"value": "{{id}}",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}/image",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload private image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "images",
+							"type": "file",
+							"src": "/Users/danyal/Downloads/chat-assets/img/favicon copy.png"
+						},
+						{
+							"key": "price",
+							"value": "15",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "uploader",
+							"value": "{{id}}",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "private",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}/image",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All My Images",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/image/me",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"image",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Public Images",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userId\": \"5f8b460721bdee151bd7d9fb\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/image",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All My Private Images",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/image/me?private=true",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"image",
+						"me"
+					],
+					"query": [
+						{
+							"key": "private",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All My Public Images",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/image/me?private=false",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"image",
+						"me"
+					],
+					"query": [
+						{
+							"key": "private",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete All My Images",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/image/all",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"image",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete image by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"imageIds\": [\"5f8b687bdae86a27e01419f7\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/image",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Toggle Image to Private",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"imageIds\": [\"5f8b690e7c2dc2284f4c308c\"],\n\t\"private\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/image",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Toggle Image to Public",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"imageIds\": [\"5f8b690e7c2dc2284f4c308c\"],\n\t\"private\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/image/public",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"image",
+						"public"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upvote Image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"imageId\": \"5f8b8082dc64c33bba5df2c1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/upvote",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"upvote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Upvote",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"imageId\": \"5f8b8082dc64c33bba5df2c1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/upvote",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"upvote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/users/me",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{authToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "f3c9c891-5c88-41e8-b01e-1c26bcf60fce",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a5a90ec2-81ea-4e20-978b-3bbcfb9db7f3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
