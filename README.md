@@ -35,7 +35,6 @@ Upvote:
 ## Installation
 Step 1: Install npm packages: `npm i` or `npm install`
 Step 2: Running the server locally: `npm start`
-Step 3: Tests: `npm test` 
 
 ## Usage
 In the root directory of the app, start the server by entering `npm start` in the command line.
@@ -47,11 +46,26 @@ In your API client, you can make GET, POST, PUT, and DELETE requests for users, 
  (https://choosealicense.com/licenses/mit/)
  
 ## Technology Used
+`Javascript` - Language
+`MongoDB Atlas` - A cross-platform document database
+`Node.js` - A Javascript runtime enviroment
+
+## Dependencies Used
+1. Express.js 
+2. Nodemon
+3. Mongoose
+4. Bcrypt
+5. Jsonwebtoken
+6. Multer
+7. Sharp
+8. Jest
+9. Supertest
 
 
-
- 
 ## Tests
+In the root directory of the app, start the server by entering `npm start` and `npm test` in the command line.
+Enter the URL `http://localhost:3000/`  in Postman, Insomnia Core or a similar API client.
+In your API client, you can make GET, POST, PUT, and DELETE requests for users, images, and upvote.
 
 ## License
  MIT
