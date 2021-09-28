@@ -16,20 +16,20 @@ This is an image upload platform where users can upload images and upvote the im
 
 As a User you can:
 User:
-1. Create a Username and Password
-2. Login User
-3. Logout User
-4. Delete your account
+- Create a Username and Password
+- Login User
+- Logout User
+- Delete your account
 
 Images:
-5. Upload Images and also in batches
-6. Get Images
-7. Delete Images
-8. Delete all images
+- Upload Images and also in batches
+- Get Images
+- Delete Images
+- Delete all images
 
 Upvote:
-9. Upvote an Image
-10. Remove Upvote from an image
+- Upvote an Image
+- Remove Upvote from an image
 
 
 ## Installation
