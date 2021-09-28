@@ -33,24 +33,24 @@ Upvote:
 
 
 ## Installation
-Step 1: Install npm packages: `npm i` or `npm install`
-Step 2: Running the server locally: `npm start`
+- Step 1: Install npm packages: `npm i` or `npm install`
+- Step 2: Running the server locally: `npm start`
  
 ## Technology-Used
-`Javascript` - Language
-`MongoDB Atlas` - A cross-platform document database
-`Node.js` - A Javascript runtime enviroment
+- `Javascript` - Language
+- `MongoDB Atlas` - A cross-platform document database
+- `Node.js` - A Javascript runtime enviroment
 
 ## Dependencies-Used
-1. Express.js 
-2. Nodemon
-3. Mongoose
-4. Bcrypt
-5. Jsonwebtoken
-6. Multer
-7. Sharp
-8. Jest
-9. Supertest
+- Express.js 
+- Nodemon
+- Mongoose
+- Bcrypt
+- Jsonwebtoken
+- Multer
+- Sharp
+- Jest
+- Supertest
 
 
 ## Tests
